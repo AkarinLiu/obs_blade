@@ -9,6 +9,6 @@ jobs:
       - name: Install Flutter
         uses: britannio/action-install-flutter@v1
         with:
-          version: $FLUTTER_VERSION
+          version: latest
       - name: Build
         run: flutter run
