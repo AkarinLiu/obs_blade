@@ -11,4 +11,4 @@ jobs:
         channel: 'stable' # or: 'beta', 'dev' or 'master'
     - run: flutter --version
     - run: flutter doctor -v
-    - run: flutter build
+    - run: flutter build -d all
