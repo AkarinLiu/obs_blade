@@ -1,0 +1,9 @@
+name: Build
+on: [push]
+jobs:
+  runs-on: ubuntu-latest
+  steps: 
+    - run: echo "Installing flutter"
+    - run: sudo snap install flutter --classic -y
+    - run: echo "Building"
+    - run: flutter doctor -v
