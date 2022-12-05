@@ -1,9 +1,14 @@
 name: Build
 on: [push]
 jobs:
-  runs-on: ubuntu-latest
-  steps: 
-    - run: echo "Installing flutter"
-    - run: sudo snap install flutter --classic -y
-    - run: echo "Building"
-    - run: flutter doctor -v
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Flutter
+        uses: britannio/action-install-flutter@v1
+        with:
+          version: $FLUTTER_VERSION
+      - name: Build
+        run: flutter run
